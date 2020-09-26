@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Barberware</string>
-    <string name="mensagem_login">Bem-vindo a barberware App</string>
+    <string name="mensagem_login">Bem-vindo a barberware Faça seu login</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_config">Configuração</string>
 </resources>

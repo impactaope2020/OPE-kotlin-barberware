@@ -7,6 +7,13 @@
     android:background="@drawable/bg_barbeiro"
     android:orientation="vertical">
 
+
+
+    <ImageView
+        android:id="@+id/imgLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textoInicial"
         android:layout_width="match_parent"
@@ -14,30 +21,18 @@
         android:text="@string/mensagem_login"
         android:textColor="#FFFAFA" />
 
-    <ImageView
-        android:id="@+id/imgLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-
-    <TextView
-        android:id="@+id/labelUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Usuário" />
 
     <EditText
         android:id="@+id/campoUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Digite o nome do Usuário" />
+        android:hint="Digite o nome do Usuário"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/labelSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Senha" />
+
 
     <EditText
         android:id="@+id/campoSenha"
@@ -45,7 +40,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Digite sua senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/botaoLogin"
