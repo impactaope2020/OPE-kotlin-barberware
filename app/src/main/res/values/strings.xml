@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">opebarberware</string>
+    <string name="app_name">Barberware</string>
+    <string name="mensagem_login">Bem-vindo a barberware App</string>
 </resources>
