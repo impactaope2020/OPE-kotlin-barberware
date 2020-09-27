@@ -6,39 +6,21 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_tela_inicial.*
 
-class TelaInicialActivity : DebugActivity() {
+class CadastrarAgendamentoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_inicial)
+        setContentView(R.layout.agendamento)
 
-        val args = intent.extras
-        val nome_usuario = args?.getString("nome_usuario")
-
-        Toast.makeText(this, "Usuário: $nome_usuario", Toast.LENGTH_LONG).show()
-
-//        msgTelaInicial.text = nome_usuario
-
-        supportActionBar?.title = "Tela Inicial"
+        supportActionBar?.title = "Agendamento"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        botaoSair.setOnClickListener{
-            finish()
-        }
-        botaoCadstrar.setOnClickListener{
-            val intent = Intent(this, CadastrarAgendamentoActivity::class.java)
-            startActivity(intent)
-        }
     }
-
-//    função sobrescrita para inflar o menu na ActionBar
+    //    função sobrescrita para inflar o menu na ActionBar
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // id do item clicado
         val id = item?.itemId
@@ -53,7 +35,8 @@ class TelaInicialActivity : DebugActivity() {
             Toast.makeText(this, "Botão de configurações", Toast.LENGTH_LONG).show()
         } else if (id == android.R.id.home) {
             //Voltar para a tela inicial usando destroy
-            finish()
+            val intent = Intent(this, TelaInicialActivity::class.java)
+            startActivity(intent)
         }
 
         return super.onOptionsItemSelected(item)

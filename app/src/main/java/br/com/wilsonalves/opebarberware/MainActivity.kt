@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -19,6 +20,8 @@ class MainActivity : DebugActivity() {
         textoInicial.setText(R.string.mensagem_login)
 
         botaoLogin.setOnClickListener{
+        progress.visibility = View.VISIBLE
+
             val valorUsuario = campoUsuario.text.toString()
             val valorSenha  = campoSenha.text.toString()
             Toast.makeText(this, "Usuário $valorUsuario; Senha $valorSenha", Toast.LENGTH_LONG).show()
@@ -40,10 +43,12 @@ class MainActivity : DebugActivity() {
 
             intent.putExtras(params)
 
+//            progress.visibility = View.GONE
+
 //            startActivity(intent)
         }
 
 
-        background.getBackground().setAlpha(128);
+        background.getBackground().setAlpha(128)
     }
 }
