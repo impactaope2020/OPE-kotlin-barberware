@@ -7,6 +7,20 @@
     tools:context=".TelaInicialActivity"
     android:orientation="vertical">
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/mensagemInicial"
         android:layout_width="wrap_content"
@@ -17,10 +31,10 @@
         android:padding="12dp"
         android:layout_margin="10dp"
         android:textStyle="bold"
-
-        android:gravity="center"
-        android:layout_gravity="center"
         />
+
+    </FrameLayout>
+
     <Button
         android:id="@+id/botaoSair"
         android:layout_width="wrap_content"
@@ -31,8 +45,10 @@
         android:id="@+id/botaoCadstrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agendar"
+        android:text="Cadastrar agendamento"
         />
+
+
 
 
 </FrameLayout>

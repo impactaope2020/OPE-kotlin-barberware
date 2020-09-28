@@ -5,15 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_tela_inicial.*
 
 class CadastrarAgendamentoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.agendamento)
+        setContentView(R.layout.activity_cadastrar_agendamento)
+
+        progress.visibility = View.VISIBLE
 
         supportActionBar?.title = "Agendamento"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        progress.visibility = View.GONE
     }
     //    função sobrescrita para inflar o menu na ActionBar
 
@@ -27,10 +33,10 @@ class CadastrarAgendamentoActivity : DebugActivity() {
         // verificar qual item foi clicado e mostrar a mensagem
         //Toast na tela
         //a comparação é feita com o recurso de id definido no "menu_main"xml
-        if(id == R.id.action_buscar){
+        if(id == R.id.searchView){
             Toast.makeText(this, "Botão de buscar", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_atualizar) {
-            Toast.makeText(this, "Botão atualizar", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "atualizazado", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_config) {
             Toast.makeText(this, "Botão de configurações", Toast.LENGTH_LONG).show()
         } else if (id == android.R.id.home) {

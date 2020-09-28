@@ -4,4 +4,5 @@
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configuração</string>
+    <string name="search_title">searchView</string>
 </resources>
