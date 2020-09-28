@@ -23,12 +23,15 @@ class TelaInicialActivity : DebugActivity() {
 
         Toast.makeText(this, "Usuário: $nome_usuario", Toast.LENGTH_LONG).show()
 
-//        msgTelaInicial.text = nome_usuario
+      mensagemInicial.visibility = View.GONE
 
         supportActionBar?.title = "Tela Inicial"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        progress.postDelayed(Runnable { progress.visibility = View.GONE }, 10000)
+        progress.postDelayed(Runnable {
+            progress.visibility = View.GONE
+            mensagemInicial.visibility = View.VISIBLE
+        }, 10000)
 
         botaoSair.setOnClickListener{
             finish()
@@ -81,8 +84,9 @@ class TelaInicialActivity : DebugActivity() {
         if(id == R.id.searchView){
             Toast.makeText(this, "Botão de buscar", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_atualizar) {
-            onRestart()
-            Toast.makeText(this, "atualizazado", Toast.LENGTH_LONG).show()
+            progress.visibility = View.VISIBLE
+            progress.postDelayed(Runnable { progress.visibility = View.GONE }, 10000)
+            Toast.makeText(this, "atualizado", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_config) {
             Toast.makeText(this, "Botão de configurações", Toast.LENGTH_LONG).show()
         } else if (id == android.R.id.home) {
