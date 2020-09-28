@@ -24,7 +24,7 @@ class MainActivity : DebugActivity() {
 
             val valorUsuario = campoUsuario.text.toString()
             val valorSenha  = campoSenha.text.toString()
-            Toast.makeText(this, "Usuário $valorUsuario; Senha $valorSenha", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Usuário $valorUsuario", Toast.LENGTH_LONG).show()
 
             //para criar um tela criamos dentro da pasta java e projeto uma nova Activity
             //uso do intent para criar uma nova tela

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_tela_inicial.*
 class CadastrarAgendamentoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastrar_agendamento)
+        setContentView(R.layout.agendamento)
 
         progress.visibility = View.VISIBLE
 
