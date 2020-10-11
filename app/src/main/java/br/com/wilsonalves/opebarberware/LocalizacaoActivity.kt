@@ -5,32 +5,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
-import kotlinx.android.synthetic.main.agendamento.*
-import kotlinx.android.synthetic.main.agendamento.layoutMenuLateral
+import kotlinx.android.synthetic.main.activity_localizacao.*
+import kotlinx.android.synthetic.main.navigation_view.*
+import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.android.synthetic.main.navigation_view.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class CadastrarAgendamentoActivity : DebugActivity() {
+class LocalizacaoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.agendamento)
+        setContentView(R.layout.activity_localizacao)
+
         this.genericLayoutMenu = layoutMenuLateral
         this.genericMenuLateral = menu_lateral
 
-        progress.visibility = View.VISIBLE
-
         setSupportActionBar(toolbar_view)
-        supportActionBar?.title = "Agendamento"
+        supportActionBar?.title = "Localização"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        progress.visibility = View.GONE
 
         configuraMenuLateral()
     }
-    //    função sobrescrita para inflar o menu na ActionBar
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
@@ -55,5 +50,4 @@ class CadastrarAgendamentoActivity : DebugActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
 }

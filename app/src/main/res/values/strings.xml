@@ -5,4 +5,10 @@
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configuração</string>
     <string name="search_title">searchView</string>
+    <string name="nav_agendamentos">Agendamentos</string>
+    <string name="nav_portifolio">Portifolio</string>
+    <string name="nav_localizacao">Localizacao</string>
+    <string name="nav_sair">Sair</string>
+    <string name="nav_drawer_open">Abrir</string>
+    <string name="nav_drawer_close">Fechar</string>
 </resources>

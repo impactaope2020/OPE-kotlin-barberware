@@ -5,31 +5,50 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.widget.LinearLayout
 import android.widget.Toast
-import kotlinx.android.synthetic.main.agendamento.*
-import kotlinx.android.synthetic.main.agendamento.layoutMenuLateral
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_portifolio_activitiy.*
 import kotlinx.android.synthetic.main.navigation_view.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class CadastrarAgendamentoActivity : DebugActivity() {
+class PortifolioActivitiy : DebugActivity() {
+    private var portifolio = listOf<Portifolio>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.agendamento)
+        setContentView(R.layout.activity_portifolio_activitiy)
         this.genericLayoutMenu = layoutMenuLateral
         this.genericMenuLateral = menu_lateral
 
-        progress.visibility = View.VISIBLE
-
         setSupportActionBar(toolbar_view)
-        supportActionBar?.title = "Agendamento"
+        supportActionBar?.title = "Portifolio"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        progress.visibility = View.GONE
-
         configuraMenuLateral()
+
+        recyclerPortifolio?.layoutManager = LinearLayoutManager(this)
+        recyclerPortifolio?.itemAnimator = DefaultItemAnimator()
+        recyclerPortifolio?.setHasFixedSize(true)
     }
-    //    função sobrescrita para inflar o menu na ActionBar
+
+    override fun onResume() {
+        super.onResume()
+        taskPortifolio()
+    }
+
+    fun taskPortifolio() {
+        this.portifolio = PortifolioService.getPortifolio()
+
+        recyclerPortifolio?.adapter = PortifolioAdapter(this.portifolio) {onClickPortifolio(it)}
+    }
+
+    fun onClickPortifolio(portifolio: Portifolio) {
+        var it = Intent(this, PortifolioDetailsActivity::class.java)
+        it.putExtra("descricao", portifolio)
+        startActivity(it)
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -55,5 +74,4 @@ class CadastrarAgendamentoActivity : DebugActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
 }

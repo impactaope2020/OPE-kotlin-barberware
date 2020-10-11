@@ -10,11 +10,16 @@ import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
+import kotlinx.android.synthetic.main.navigation_view.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class TelaInicialActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
+
+        this.genericLayoutMenu = layoutMenuLateral
+        this.genericMenuLateral = menu_lateral
 
         progress.visibility = View.VISIBLE
 
@@ -23,25 +28,29 @@ class TelaInicialActivity : DebugActivity() {
 
         Toast.makeText(this, "Usuário: $nome_usuario", Toast.LENGTH_LONG).show()
 
-      mensagemInicial.visibility = View.GONE
+        mensagemInicial.visibility = View.GONE
 
+        setSupportActionBar(toolbar_view)
         supportActionBar?.title = "Tela Inicial"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        configuraMenuLateral()
 
         progress.postDelayed(Runnable {
             progress.visibility = View.GONE
             mensagemInicial.visibility = View.VISIBLE
         }, 10000)
 
-        botaoSair.setOnClickListener{
-            finish()
-        }
-        botaoCadstrar.setOnClickListener{
-            val intent = Intent(this, CadastrarAgendamentoActivity::class.java)
-            startActivity(intent)
-        }
+//        botaoSair.setOnClickListener{
+//            finish()
+//        }
+//        botaoCadstrar.setOnClickListener{
+//            val intent = Intent(this, CadastrarAgendamentoActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
+
 
 //    função sobrescrita para inflar o menu na ActionBar
 
