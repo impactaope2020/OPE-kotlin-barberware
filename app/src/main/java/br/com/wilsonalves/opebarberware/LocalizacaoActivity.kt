@@ -7,15 +7,19 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_localizacao.*
+import kotlinx.android.synthetic.main.activity_localizacao.endereco_barber
+import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.navigation_view.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.android.synthetic.main.navigation_view.*
-import kotlinx.android.synthetic.main.toolbar.*
+
 
 class LocalizacaoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_localizacao)
+
+
+        endereco_barber.setImageResource(R.drawable.endereco_baber)
 
         this.genericLayoutMenu = layoutMenuLateral
         this.genericMenuLateral = menu_lateral

@@ -57,6 +57,8 @@ open class DebugActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
                 startActivity(intent)
             }
             R.id.nav_sair -> {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "sair", Toast.LENGTH_SHORT).show()
             }
         }

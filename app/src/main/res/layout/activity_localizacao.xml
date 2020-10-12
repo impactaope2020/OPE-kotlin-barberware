@@ -12,10 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <include layout="@layout/toolbar" />
+
     </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/endereco_barber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <include layout="@layout/navigation_view" />
 
-
-
 </androidx.drawerlayout.widget.DrawerLayout >
+

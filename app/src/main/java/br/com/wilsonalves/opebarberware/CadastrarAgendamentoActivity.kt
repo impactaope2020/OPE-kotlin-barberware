@@ -7,25 +7,25 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import kotlinx.android.synthetic.main.agendamento.*
-import kotlinx.android.synthetic.main.agendamento.layoutMenuLateral
+
+import kotlinx.android.synthetic.main.activity_cadastrar_agendamento.*
 import kotlinx.android.synthetic.main.navigation_view.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class CadastrarAgendamentoActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.agendamento)
+        setContentView(R.layout.activity_cadastrar_agendamento)
         this.genericLayoutMenu = layoutMenuLateral
         this.genericMenuLateral = menu_lateral
 
-        progress.visibility = View.VISIBLE
+        //progress.visibility = View.VISIBLE
 
         setSupportActionBar(toolbar_view)
         supportActionBar?.title = "Agendamento"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        progress.visibility = View.GONE
+        //progress.visibility = View.GONE
 
         configuraMenuLateral()
     }

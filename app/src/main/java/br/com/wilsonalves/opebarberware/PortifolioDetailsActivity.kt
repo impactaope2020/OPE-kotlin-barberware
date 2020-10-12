@@ -9,8 +9,8 @@ class PortifolioDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_portifolio_details)
 
-        var portifolio = intent.getSerializableExtra("descricao")
+        var descricao = intent.getSerializableExtra("descricao")
 
-        Toast.makeText(this, "$portifolio", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "$descricao", Toast.LENGTH_LONG).show()
     }
 }

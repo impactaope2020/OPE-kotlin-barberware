@@ -10,7 +10,6 @@
             android:id="@+id/nav_agendamentos"
             android:title="@string/nav_agendamentos"
             android:icon="@drawable/ic_agendamentos"
-            android:checked="true"
             />
         <item
             android:id="@+id/nav_localizacao"
