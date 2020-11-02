@@ -5,21 +5,24 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".BarberwareApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".NovoPortifolioActivity" />
         <activity
             android:name=".PortifolioDetailsActivity"
-            android:theme="@style/AppTheme.toolbar"></activity>
+            android:theme="@style/AppTheme.toolbar" />
         <activity
             android:name=".LocalizacaoActivity"
-            android:theme="@style/AppTheme.toolbar"></activity>
+            android:theme="@style/AppTheme.toolbar" />
         <activity
             android:name=".PortifolioActivitiy"
-            android:theme="@style/AppTheme.toolbar"></activity>
+            android:theme="@style/AppTheme.toolbar" />
         <activity
             android:name=".CadastrarAgendamentoActivity"
             android:theme="@style/AppTheme.toolbar" />

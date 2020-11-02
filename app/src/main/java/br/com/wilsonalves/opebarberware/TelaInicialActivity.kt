@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
+import br.com.wilsonalves.lmsapp.Prefs
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.navigation_view.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -35,6 +36,7 @@ class TelaInicialActivity : DebugActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         configuraMenuLateral()
+//        Toast.makeText(this, Prefs.getString("curso"), Toast.LENGTH_LONG).show()
 
         progress.postDelayed(Runnable {
             progress.visibility = View.GONE

@@ -51,6 +51,14 @@
         android:inputType="textPassword"
         android:textColor="@color/colorAccent"
         android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/checkLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lembrar Senha"
+        android:textColor="#FFFFFF" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
