@@ -8,8 +8,8 @@ import java.io.Serializable
 class Portifolio: Serializable {
     @PrimaryKey
     var id: Long = 0
-    var foto = ""
     var descricao = ""
+    var imagem = ""
 
     override fun toString(): String {
         return "Descrição(descricao='$descricao')"

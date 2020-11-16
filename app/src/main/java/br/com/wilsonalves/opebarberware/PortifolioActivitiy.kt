@@ -52,7 +52,7 @@ class PortifolioActivitiy : DebugActivity() {
     }
 
     fun onClickPortifolio(portifolio: Portifolio) {
-        var it = Intent(this, PortifolioDetailsActivity::class.java)
+        val it = Intent(this, PortifolioDetailsActivity::class.java)
         it.putExtra("descricao", portifolio)
         startActivity(it)
     }

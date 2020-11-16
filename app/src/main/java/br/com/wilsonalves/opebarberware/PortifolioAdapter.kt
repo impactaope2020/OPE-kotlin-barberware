@@ -43,7 +43,7 @@ class PortifolioAdapter (
         holder.cardDescricao.text = portifolio.descricao
         holder.cardProgress.visibility = View.VISIBLE
 
-        Picasso.with(holder.itemView.context).load(portifolio.foto).fit().into(holder.cardImg,
+        Picasso.with(holder.itemView.context).load(portifolio.imagem).fit().into(holder.cardImg,
             object: com.squareup.picasso.Callback{
                 override fun onSuccess() {
                     holder.cardProgress.visibility = View.GONE

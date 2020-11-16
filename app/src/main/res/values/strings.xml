@@ -12,4 +12,7 @@
     <string name="nav_drawer_open">Abrir</string>
     <string name="nav_drawer_close">Fechar</string>
     <string name="action_adicionar">adicionar</string>
+    <string name="API_KEY">AIzaSyAfBOuBMSXmxV4Z9Xvv9MCfZF6IY_1hMG8</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

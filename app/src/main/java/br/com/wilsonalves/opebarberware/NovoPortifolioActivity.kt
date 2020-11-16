@@ -14,7 +14,7 @@ class NovoPortifolioActivity : AppCompatActivity() {
             Thread{
                 val portifolio = Portifolio()
                 portifolio.descricao = descricao.text.toString()
-                portifolio.foto = foto.text.toString()
+                portifolio.imagem = imagem.text.toString()
 
                 PortifolioService.save(portifolio)
                 runOnUiThread {

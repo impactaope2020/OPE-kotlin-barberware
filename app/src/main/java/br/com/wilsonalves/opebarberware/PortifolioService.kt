@@ -8,7 +8,8 @@ import com.google.gson.reflect.TypeToken
 import java.net.URL
 
 object PortifolioService {
-    val host = "http://127.0.0.1:5000"
+//    val host = "https://127.0.0.1:5000" //192.168.0.230
+   val host = "https://willrockies.pythonanywhere.com"
     val TAG = "WS_LMSApp"
     fun getPortifolio(context: Context): List<Portifolio> {
 //        val portifolios = mutableListOf<Portifolio>()
@@ -16,24 +17,25 @@ object PortifolioService {
 //            val p = Portifolio()
 //            p.descricao = "Descrição $i"
 //            p.foto = "https://a-static.mlcdn.com.br/618x463/relogio-de-vinil-disco-lp-parede-barber-shop-barbearia-3d-fantasy/3dfantasy/df66c6d87cca11ea8db64201ac18501e/3f3a9ac81e5f89f8b564cdbe93330f19.jpg"
-//            p.barbeiro = "Barbeiro $i"
 //
 //            portifolios.add(p)
 //        }
 //        return portifolios
 
-//        val url = "$host/disciplinas"
-//        val json = HttpHelper.get(url)
-//
-//        Log.d(TAG, json)
-//
-//        return parserJson<List<Portifolio>>(json)
+//        val url = "$host/portifolio"
+        val url = "$host/portifolio"
+        val json = URL(url).readText()
+        //val json = HttpHelper.get(url)
 
-        val dao = DatabaseManager.getPortifolioDAO()
-        return dao.findAll()
+        Log.d(TAG, json)
+
+        return parserJson<List<Portifolio>>(json)
+
+        //val dao = DatabaseManager.getPortifolioDAO()
+       //return dao.findAll()
     }
     fun save(portifolio: Portifolio) {
-//        HttpHelper.post("$host/disciplinas",
+//        HttpHelper.post("$host/portifolio",
 //            GsonBuilder().create().toJson(portifolio)
 //        )
         val dao = DatabaseManager.getPortifolioDAO()
