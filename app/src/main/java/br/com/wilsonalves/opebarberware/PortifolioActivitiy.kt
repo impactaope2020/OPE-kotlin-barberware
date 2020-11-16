@@ -47,6 +47,7 @@ class PortifolioActivitiy : DebugActivity() {
             this.portifolio = PortifolioService.getPortifolio(context)
             runOnUiThread {
                 recyclerPortifolio?.adapter = PortifolioAdapter(portifolio) {onClickPortifolio(it)}
+
             }
         }.start()
     }

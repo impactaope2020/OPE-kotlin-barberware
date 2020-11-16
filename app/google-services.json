@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "683826953664",
+    "firebase_url": "https://barberware-ope.firebaseio.com",
+    "project_id": "barberware-ope",
+    "storage_bucket": "barberware-ope.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683826953664:android:0b8f2a6b85116b0e031c25",
+        "android_client_info": {
+          "package_name": "br.com.wilsonalves.opebarberware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683826953664-9e5sqv6u9vddq1s9ffhuh5ipceo4q2gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS6J6iDOizIyMWsW64Kq55gJLPL6c3fEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683826953664-9e5sqv6u9vddq1s9ffhuh5ipceo4q2gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

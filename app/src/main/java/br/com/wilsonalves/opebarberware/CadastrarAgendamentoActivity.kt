@@ -28,6 +28,8 @@ class CadastrarAgendamentoActivity : DebugActivity() {
         //progress.visibility = View.GONE
 
         configuraMenuLateral()
+
+        botaoAgendar.setOnClickListener{onClickAgendar()}
     }
     //    função sobrescrita para inflar o menu na ActionBar
 
@@ -54,6 +56,13 @@ class CadastrarAgendamentoActivity : DebugActivity() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    fun onClickAgendar(){
+
+        Toast.makeText(this, "Agendando", Toast.LENGTH_LONG).show()
+        NotificationUtil.create(1, intent,
+            "Mensagem Recebida", "Aguarde logo entraremos em contato")
     }
 
 }
